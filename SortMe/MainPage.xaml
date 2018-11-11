@@ -9,6 +9,61 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="640"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid x:Name="rootGrid" Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
+            <StackPanel>
+                <Button  />
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="0" Background="#1C1C1C" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Name="GamburgerButton" 
+                    FontFamily="Segoe MDL2 Assets" 
+                    FontSize="18" Content="&#xE700;" 
+                    Foreground="White" 
+                    VerticalAlignment="Stretch" 
+                    HorizontalAlignment="Stretch" 
+                    Grid.Column="0"
+                    Click="GamburgerButton_Click"/>
+        </Grid>
+        <SplitView Name="MySplitView" Grid.Row="1" OpenPaneLength="360" CompactPaneLength="50" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
+            <SplitView.Pane>
+                <ListBox Name="MyListBox" Background="#EEE5DE">
+                    <ListBoxItem>
+                        <StackPanel Orientation="Horizontal" Width="350">
+                            <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xF167;" Foreground="Black" Margin="0 10 10 0"/>
+                            <TextBlock Width="300" TextWrapping="WrapWholeWords" Text="Нажми на папку, чтобы выбрать каталог где сохранять файлы."/>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xF167;" Foreground="Black" Margin="0 10 10 0"/>
+                            <TextBlock Width="300" TextWrapping="WrapWholeWords" Text="Нажми на файл, чтобы выбрать файлы которые нужно отсортировать."/>
+                        </StackPanel>
+                    </ListBoxItem>
+                </ListBox>
+            </SplitView.Pane>
+        </SplitView>
+        <Grid Grid.Row="1" Grid.ColumnSpan="1" Background="Gainsboro">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackPanel Orientation="Horizontal" Width="360" Margin="0 0 0 0">
+                <Button Name="Folder" Content="Folder" Foreground="White" Width="60" Height="60" Margin="50 0 0 0"/>
+                <Button Name="File" Content="File" Foreground="White" Width="60" Height="60" Margin="100 0 0 0"/>
+            </StackPanel>
+        </Grid>
     </Grid>
 </Page>

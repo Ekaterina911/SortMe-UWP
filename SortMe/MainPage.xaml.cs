@@ -26,5 +26,10 @@ namespace SortMe
         {
             this.InitializeComponent();
         }
+
+        private void GamburgerButton_Click(object sender, RoutedEventArgs e)
+        {
+            MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
+        }
     }
 }
