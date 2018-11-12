@@ -82,21 +82,22 @@
                     Grid.Column="0"
                     Click="GamburgerButton_Click"/>
         </Grid>
-            <StackPanel Name="FolderAndFile" Orientation="Horizontal" Width="360">
-                <Button Name="Folder" Foreground="White" Width="60" Height="60" Margin="50 0 0 0">
-                    <Button.Background>
-                        <ImageBrush ImageSource="/Assets/Folder.png"/>
-                    </Button.Background>
-                </Button>
-                <Button Name="File" Foreground="White" Width="60" Height="60" Margin="100 0 0 0">
-                    <Button.Background>
-                        <ImageBrush ImageSource="/Assets/File.png"/>
-                    </Button.Background>
-                </Button>
-            </StackPanel>
+        <StackPanel Name="FolderAndFile" Orientation="Horizontal" Width="360">
+            <Button Name="Folder" Foreground="White" Width="60" Height="60" Margin="50 0 0 0" Click="Folder_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Assets/Folder.png"/>
+                </Button.Background>
+            </Button>
+            <Button Name="File" Foreground="White" Width="60" Height="60" Margin="100 0 0 0" Click="File_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Assets/File.png"/>
+                </Button.Background>
+            </Button>
+        </StackPanel>
         <ScrollViewer Name="Scroll" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
-            <StackPanel>
-                <TextBlock TextWrapping="Wrap" FontSize="16" Text="1111111"/>
+            <StackPanel Background="PaleGoldenrod">
+                <TextBlock Name="path" Text="123"/>
+                <TextBlock Name="text" TextWrapping="Wrap" FontSize="16" Text="1111111"/>
             </StackPanel>
         </ScrollViewer>
         <SplitView Name="MySplitView" Grid.Row="1" Grid.RowSpan="2" OpenPaneLength="360" CompactPaneLength="50" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
